@@ -1,0 +1,3 @@
+[submodule "jenkins_pipeline-test"]
+	path = jenkins_pipeline-test
+	url = https://github.com/Neutrollized/jenkins_pipeline-test.git
