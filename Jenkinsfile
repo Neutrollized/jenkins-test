@@ -1,9 +1,5 @@
-node {
-    stage ('Stage 1') {
-        echo 'Hello World 1'
-    }
-    
-    stage ('Stage 2') {
-        echo 'Hello World 2'
-    }
+fileLoader.fromGit {
+    'jenkins_pipeline',
+    'https://github.com/Neutrollized/jenkins_pipeline-test.git',
+    'master'
 }
