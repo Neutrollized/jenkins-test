@@ -23,7 +23,21 @@ node {
             echo 'Compiling software'
         }
 
-/*
+        // scripted parallel
+        stage ('Parallel stage') {
+            parallel "inttest1: {
+                echo 'Running integration test 1'
+            },
+            inttest2: {
+                echo 'Running integration test 2'
+            },
+            uitests: {
+                echo 'Running UI functional tests'
+            }
+        }
+
+/* 
+        // declarative parallel?
         stage ('Parallel stage') {
             parallel {
                 stage ('Run integration test 1') {
@@ -44,17 +58,6 @@ node {
             }
         }
 */
-        stage ('Parallel stage') {
-            parallel stage1: {
-                echo 'Running test 1'
-            },
-            stage2: {
-                echo 'Running test 2'
-            },
-            stage3: {
-                echo 'Running test 3'
-            }
-        }
     }
     catch (err) {
         echo "\u27A1 Caught: ${err}"
