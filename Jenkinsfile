@@ -33,7 +33,6 @@ node {
             echo 'Hello World 1'
         }
 
-/*
         stage ('Parallel stage') {
             parallel {
                 stage ('2a') {
@@ -48,7 +47,6 @@ node {
                 }
             }
         }
-*/
     }
     catch (err) {
         echo "\u27A1 Caught: ${err}"
