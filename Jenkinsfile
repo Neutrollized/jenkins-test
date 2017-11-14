@@ -1,7 +1,9 @@
 node {
     try {
-        wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
+        // requires AnsiColor plugin
+        wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
             echo "\u27A1 inside the try"
+            sh('echo alive on $(hostname)')
 
             stage ('Stage 1') {
                 echo 'Hello World 1'
