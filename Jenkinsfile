@@ -23,6 +23,7 @@ node {
                 echo 'Hello World 1'
             }
 
+/*
             stage ('Parallel stage') {
                 parallel {
                     stage ('2a') {
@@ -37,6 +38,7 @@ node {
                     }
                 }
             }
+*/
         }
     }
     catch (err) {
