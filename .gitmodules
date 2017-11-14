@@ -1,4 +1,4 @@
 [submodule "test-code"]
 	path = test-code
-	url = https://github.com/Neutrollized/test-code.git
-        branch = master
+	url = https://github.com/Neutrollized/test-code
+	branch = master
