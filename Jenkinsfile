@@ -16,33 +16,47 @@ node {
                 // of the specified submodule(s)
                 checkout scm
                 sh 'git submodule update --remote --init'
+            }  
+        }
+
+        stage ('Build') {
+            echo 'Compiling software'
+        }
 
 /*
-                echo "\u27A1 GIT_PROJECT: ${env.GIT_PROJECT}"
-                echo "\u27A1 GIT_PROJECT_KEY: ${env.GIT_PROJECT_KEY}"
-                echo "\u27A1 GIT_REPO: ${env.GIT_REPO}"
-                echo "\u27A1 GIT_BRANCH: ${env.GIT_BRANCH}"
-                echo "\u27A1 GIT_COMMIT: ${env.GIT_COMMIT}"
-                echo "\u27A1 GIT_COMMIT_SHORT: ${env.GIT_COMMIT_SHORT}"
-*/
-            }  
-
-        }
-
-        stage ('Stage 1') {
-            echo 'Hello World 1'
-        }
-
         stage ('Parallel stage') {
             parallel {
-                stage ('2a') {
+                stage ('Run integration test 1') {
                     steps {
-                        echo 'Hello World 2a'
+                        echo 'Running test 1'
                     }
                 }
-                stage ('2b') {
+                stage ('Run integration test 2') {
                     steps {
-                        echo 'Hello World 2b'
+                        echo 'Running test 2'
+                    }
+                }
+                stage ('Run UI functional tests') {
+                    steps {
+                        echo 'Running test 3'
+                    }
+                }
+            }
+        }
+*/
+        stage ('Parallel stage') {
+            steps {
+                parallel {
+                    "stage1": {
+                        echo 'Running test 1'
+                    }
+                }
+                    "stage2": {
+                        echo 'Running test 2'
+                    }
+                }
+                    "stage3": {
+                        echo 'Running test 3'
                     }
                 }
             }
