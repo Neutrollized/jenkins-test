@@ -2,9 +2,7 @@ node {
     try {
         // requires AnsiColor plugin
         wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
-            echo "\u27A1 inside the try"
-            sh 'echo alive on $(hostname)'
-
+            echo "\u27A1 Begins here..."
             stage ('Clean workspace') {
                 deleteDir()
                 sh 'pwd'
