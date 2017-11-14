@@ -45,20 +45,14 @@ node {
         }
 */
         stage ('Parallel stage') {
-            steps {
-                parallel {
-                    "stage1": {
-                        echo 'Running test 1'
-                    }
-                }
-                    "stage2": {
-                        echo 'Running test 2'
-                    }
-                }
-                    "stage3": {
-                        echo 'Running test 3'
-                    }
-                }
+            parallel stage1: {
+                echo 'Running test 1'
+            },
+            stage2: {
+                echo 'Running test 2'
+            },
+            stage3: {
+                echo 'Running test 3'
             }
         }
     }
