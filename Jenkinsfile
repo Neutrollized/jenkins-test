@@ -23,11 +23,12 @@ node {
                 echo 'Hello World 1'
             }
 
-            stage ('Parallel stage') {
-                parallel 2A: {
+            parallel 2A: {
+                stage ('Stage 2A') {
                     echo 'Hello World 2a'
-                },
-                2B: {
+                }
+            }, 2B: {
+                stage ('Stage 2B') {
                     echo 'Hello World 2b'
                 }
             }
