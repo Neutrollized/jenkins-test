@@ -25,10 +25,10 @@ node {
 
         // scripted parallel
         stage ('Parallel stage') {
-            parallel inttest1: {
+            parallel "integration test 1": {
                 echo 'Running integration test 1'
             },
-            inttest2: {
+            "integration test 2": {
                 echo 'Running integration test 2'
             },
             "ui tests": {
