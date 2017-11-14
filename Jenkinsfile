@@ -25,11 +25,15 @@ node {
 
             stage ('Parallel stage') {
                 parallel {
-                    'stage2a': {
-                        echo 'Hello World 2a'
+                    stage ('2a') {
+                        steps {
+                            echo 'Hello World 2a'
+                        }
                     }
-                    'stage2b': {
-                        echo 'Hello World 2b'
+                    stage ('2b') {
+                        steps {
+                            echo 'Hello World 2b'
+                        }
                     }
                 }
             }
