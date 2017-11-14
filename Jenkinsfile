@@ -7,6 +7,7 @@ node {
 
             stage ('Clean workspace') {
                 deleteDir()
+                sh 'pwd'
                 sh 'ls -lah'
             }
 
@@ -16,14 +17,14 @@ node {
                 checkout scm
                 sh 'git submodule update --remote --init'
 
-                gitCommitInfo()
-
+/*
                 echo "\u27A1 GIT_PROJECT: ${env.GIT_PROJECT}"
                 echo "\u27A1 GIT_PROJECT_KEY: ${env.GIT_PROJECT_KEY}"
                 echo "\u27A1 GIT_REPO: ${env.GIT_REPO}"
                 echo "\u27A1 GIT_BRANCH: ${env.GIT_BRANCH}"
                 echo "\u27A1 GIT_COMMIT: ${env.GIT_COMMIT}"
                 echo "\u27A1 GIT_COMMIT_SHORT: ${env.GIT_COMMIT_SHORT}"
+*/
             }  
 
         }
