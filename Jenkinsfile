@@ -24,15 +24,11 @@ node {
             }
 
             stage ('Parallel stage') {
-                steps {
-                    parallel {
-                        "2A" : {
-                            echo 'Hello World 2a'
-                        },
-                        "2B" : {
-                            echo 'Hello World 2b'
-                        }
-                    }
+                parallel 2A: {
+                    echo 'Hello World 2a'
+                },
+                2B: {
+                    echo 'Hello World 2b'
                 }
             }
         }
