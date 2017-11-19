@@ -1,6 +1,6 @@
 // docker vars
-env.DOCKER_NODEJS = 'neutrollized/chromium-headless-nodejs'
-env.NODEJS_VER = '6.11.3'
+env.DOCKER_ANGULARCLI = 'neutrollized/chromium-headless-ng'
+env.NG_VER = '1.1.0'
 env.KARMA_PORT = '-p 9876:9876'
 env.PROTRACTOR_PORT = '-p 49152:49152'
 
