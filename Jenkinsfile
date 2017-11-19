@@ -1,7 +1,14 @@
+// docker vars
 env.ANGULARCLI_IMAGE = 'neutrollized/chromium-headless-ng'
 env.ANGULARCLI_VER = '1.1.0'
 env.KARMA_PORT = '-p 9876:9876'
 env.PROTRACTOR_PORT = '-p 49152:49152'
+
+// node/nmp/ng vars
+env.NPM_OPTS = '--silent'
+env.BUILD_OPTS = '--progress=false'
+env.TEST_OPTS = '--progress=false'
+env.E2E_OPTS = '--progress=false'
 
 // requires Pipeline Remote Loader Plugin
 fileLoader.fromGit(
