@@ -1,3 +1,8 @@
+env.ANGULARCLI_IMAGE = 'neutrollized/chromium-headless-ng'
+env.ANGULARCLI_VER = '1.1.0'
+env.KARMA_PORT = '-p 49152:49152'
+env.PROTRACTOR_PORT = '-p 49152:49152'
+
 // requires Pipeline Remote Loader Plugin
 fileLoader.fromGit(
   'jenkins_pipeline',
