@@ -12,7 +12,8 @@ env.E2E_OPTS = '--progress=false'
 
 // Manadatory Jenkinsfile vars
 env.PROJECT_REPO = 'test-code'
-env.PROJECT_DIR = 'angular-realworld-example-app'
+//env.PROJECT_DIR = 'angular-realworld-example-app'
+env.PROJECT_DIR = 'esri-angular-cli-example'
 
 // requires Pipeline Remote Loader Plugin
 fileLoader.fromGit(
