@@ -10,6 +10,10 @@ env.BUILD_OPTS = '--progress=false'
 env.TEST_OPTS = '--progress=false'
 env.E2E_OPTS = '--progress=false'
 
+// Manadatory Jenkinsfile vars
+env.PROJECT_REPO = 'test-code'
+env.PROJECT_DIR = 'angular-realworld-example-app'
+
 // requires Pipeline Remote Loader Plugin
 fileLoader.fromGit(
   'jenkins_pipeline',
