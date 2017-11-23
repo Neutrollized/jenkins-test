@@ -1,6 +1,6 @@
 // docker vars
-//env.DOCKER_NODEJS = 'neutrollized/headless-chrome-nodejs'
-env.DOCKER_NODEJS = 'neutrollized/test'
+env.DOCKER_NODEJS = 'neutrollized/headless-chrome-nodejs'
+//env.DOCKER_NODEJS = 'neutrollized/test'
 env.NODEJS_VER = '6.11.2'
 env.KARMA_PORT = '-p 9876:9876'
 env.PROTRACTOR_PORT = '-p 49152:49152'
