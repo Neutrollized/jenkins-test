@@ -17,7 +17,7 @@ env.PROJECT_DIR = 'angular5-example-app'
 
 // requires Pipeline Remote Loader Plugin
 fileLoader.fromGit(
-  'jenkins_pipeline',
+  'nodePipeline',
   'https://github.com/Neutrollized/jenkins_pipeline-test.git',
   'master'
 )
